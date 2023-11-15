@@ -1,0 +1,32 @@
+<div class="home">
+    <banner-component [text]="textHome"/>
+
+    <form class="home__form" [formGroup]="matchForm" (ngSubmit)="handlerContactSubmit()">
+        <div class="home__form__container">
+            <div class="home__form__container__child">
+                <label for="sex">Escoje el género de tu interés</label>
+                <select id="sex" formControlName="sex">
+                    <option value="varon">Varón</option>
+                    <option value="mujer">Mujer</option>
+                </select>
+            </div>
+            <div class="home__form__container__child">
+                <label for="city">Escoje tu ciudad</label>
+                <select id="city" formControlName="city">
+                    @for (city of cities; track $index) {
+                        <option value="{{city}}">{{city}}</option>
+                    }
+                </select>
+            </div>
+            <div class="home__form__container__child">
+                <label for="interest">Escoje tu interés</label>
+                <select id="interest" formControlName="interest">
+                    @for (interest of interests; track $index) {
+                        <option value="{{interest}}">{{interest}}</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <button class="home__button" type="submit">Enviar</button>
+    </form>
+</div>

@@ -1,0 +1,115 @@
+.home {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__form {
+        margin-top: 3rem;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        
+        z-index: 10;
+
+        &__container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            &__child {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                label {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: #000;
+                    margin-bottom: 0.5rem;
+                }
+
+                select {
+                    width: 80%;
+                    padding: 0.5rem;
+                    border: 1px solid #e30346;
+                    border-radius: 0.25rem;
+                    border-color: #f07a9d;
+                    font-size: 1rem;
+                    color: #333;
+        
+                    option {
+                        color: #333;
+                        margin: 0;
+                        padding: 0.5rem;
+        
+                        &:focus {
+                            background-color: #e30346;
+                            color: #fff;
+                        }
+                    }
+        
+                    &:hover {
+                        box-shadow: 0 0 0 0.25rem rgb(227 3 70 / 25%);
+                    }
+                }
+        
+                .ng-valid[formControlName] {
+                    border-color: #e30346;
+                }
+        
+                .ng-invalid[formControlName] {
+                    border-color: #dc3545;
+                }
+            }
+        }
+
+
+    }
+
+    &__button {
+        justify-self: center;
+        align-self: center;
+        width: 20%;
+        padding: .3125rem;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        border: 1px solid rgb(240, 122, 157);
+        transition: background-color 0.3s ease, border 0.3s ease;
+
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #f07a9d;
+
+        &:hover {
+            border: 1px solid #f07a9d;
+            color: #e30346;
+
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__img {
+            width: 8rem;
+            height: 8rem;
+        }
+
+        &__title {
+            font-size: 4rem;
+        }
+
+        &__subtitle {
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    width: 18.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.125rem;
+    background: #141414;
+    color: #fff;
+    font: {
+        size: 20px;
+        weight: 500;
+    }
+    border: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+
+    span {
+        position: relative;
+        z-index: 2;
+        transition: .3s ease all;
+    }
+
+    &.back {
+        background: none;
+        color: #e30346;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            fill: none;
+        }
+
+        rect {
+            width: 100%;
+            height: 100%;
+            stroke: #e30346;
+            stroke-width: 10px;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            transition: .6s ease all;
+        }
+
+        &:hover rect {
+            stroke-dashoffset: 0;
+        }
+    }
+}
